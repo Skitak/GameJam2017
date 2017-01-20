@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Deplacement : MonoBehaviour {
 
-    public Transform myTransform; // mon Transform
     float myYrotate;
     Rigidbody myRigidbody;
-
-    public GameObject Wind; // le gameObject Vent
+    private string input; 
+    public GameObject Wind;
+    public int m_numJoueur;
     Transform windTransform; //le Transform du vent
     float yWind; // le y en rotation du wind
 
@@ -23,23 +23,20 @@ public class Deplacement : MonoBehaviour {
     public  float rangeOfSpeed;
 
     float axe;
-
-    // Use this for initialization
+    
     void Start () {
         myRigidbody = GetComponent<Rigidbody>();
-        myTransform = gameObject.GetComponent<Transform>();
         Wind = GameObject.FindGameObjectWithTag("Wibd");
         windTransform = Wind.GetComponent<Transform>();
-
+        input = "Horizontal " + m_numJoueur;
     }
 	
-	// Update is called once per frame
 	void Update () {
-        axe = Input.GetAxis("Horizontal" + this.name);
+        axe = Input.GetAxis(input);
         transform.eulerAngles += new Vector3(0,  axe * 180 * Time.deltaTime * (vRotate-SpeedUpdate()/vMax),0) ;
 
 
-        myYrotate = myTransform.rotation.y;
+        myYrotate = transform.rotation.y;
         yWind = windTransform.rotation.y;
         transform.position += (transform.forward * SpeedUpdate()) * Time.deltaTime;
 
