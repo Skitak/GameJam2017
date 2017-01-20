@@ -13,16 +13,19 @@ public class Movements : MonoBehaviour {
 	void Start () {
         rigid = this.GetComponent<Rigidbody>();
         move(new Vector3(0, 0, 1));
+
+        /*Input test for network*/
+        rigid.velocity = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
 	}
 
     private void FixedUpdate()
     {
-        rigid.velocity = Vector3.forward * m_speed;
+        //rigid.velocity = Vector3.forward * m_speed;
     }
 
     public void move(Vector3 input)
     {
         direction = input;
-        this.transform.Rotate(input);
+        
     }
 }
