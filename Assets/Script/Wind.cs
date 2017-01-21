@@ -9,6 +9,7 @@ public class Wind : MonoBehaviour {
     public float timer_from;
     public float timer_to;
     public float transition_time;
+    public GameObject particles;
 
     private float timer;
 

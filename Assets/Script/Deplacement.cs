@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Deplacement : MonoBehaviour {
     
-    public GameObject Wind;
+    public GameObject wind;
     public int m_numJoueur;
 
     public float vMax;
@@ -30,19 +30,16 @@ public class Deplacement : MonoBehaviour {
     void Start () {
         myRigidbody = GetComponent<Rigidbody>();
         joystickAxis = new Vector3(0, 0, 0);
-        Wind = GameObject.FindGameObjectWithTag("Wibd");
-        windTransform = Wind.GetComponent<Transform>();
         horizontalAxis = "Horizontal " + m_numJoueur;
         verticalAxis = "Vertical " + m_numJoueur;
     }
 	
 	void Update () {
         Rotate();
-        
 
+        yWind = wind.transform.eulerAngles.y;
+        myYrotate = transform.eulerAngles.y;
 
-        myYrotate = transform.rotation.y;
-        yWind = windTransform.rotation.y;
         transform.position += (transform.forward * SpeedUpdate()) * Time.deltaTime;
 
         GizmosService.Cone(transform.position, transform.forward, transform.up, 5.0f, 25.0f);
@@ -62,7 +59,7 @@ public class Deplacement : MonoBehaviour {
             yMin = yWind;
         }
         temp = yMax - yMin;
-        return (Mathf.Abs(vMax - (vMax * (Mathf.Pow(temp,rangeOfSpeed)))));
+        return (Mathf.Abs(vMax - (vMax * (Mathf.Pow(temp/180,rangeOfSpeed)))));
     }
 
     private void Rotate()
@@ -99,5 +96,6 @@ public class Deplacement : MonoBehaviour {
 
         
         transform.eulerAngles += new Vector3(0, direction * 180 * Time.deltaTime * (vRotate - SpeedUpdate() / vMax), 0);
+        Debug.Log(actualAngle + " " + angleDesired);
     }
 }
