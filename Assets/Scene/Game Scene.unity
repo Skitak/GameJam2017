@@ -142,7 +142,7 @@ GameObject:
   m_Component:
   - component: {fileID: 80277574}
   m_Layer: 0
-  m_Name: GameObject (2)
+  m_Name: Spawn 3
   m_TagString: Untagged
   m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -988,7 +988,7 @@ GameObject:
   m_Component:
   - component: {fileID: 727845980}
   m_Layer: 0
-  m_Name: GameObject (3)
+  m_Name: Spawn 4
   m_TagString: Untagged
   m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -1879,7 +1879,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1742531632}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Spawn 1
   m_TagString: Untagged
   m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -1917,7 +1917,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1878259003}
   m_Layer: 0
-  m_Name: GameObject (1)
+  m_Name: Spawn 2
   m_TagString: Untagged
   m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
