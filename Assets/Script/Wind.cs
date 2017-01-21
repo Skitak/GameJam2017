@@ -11,6 +11,7 @@ public class Wind : MonoBehaviour {
     public float timer_to;
     public float transition_time;
     public GameObject particles;
+	public bool paused;
 
 	private float timer_begin;
     private float timer;
@@ -23,6 +24,8 @@ public class Wind : MonoBehaviour {
     }
 
 	void Update () {
+		if (paused)
+			return;
         timer -= Time.deltaTime;
         if (timer <= 0)
             changeDirection();
