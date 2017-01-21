@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Deplacement : MonoBehaviour {
     
-    public GameObject Wind;
+    
     public int m_numJoueur;
 
     public float vMax;
@@ -23,26 +23,25 @@ public class Deplacement : MonoBehaviour {
     Transform windTransform;
     Rigidbody myRigidbody;
     Vector3 joystickAxis;
+    GameObject wind;
 
     private string horizontalAxis;
     private string verticalAxis;
     
     void Start () {
+        wind = GameObject.FindGameObjectWithTag("Wind");
         myRigidbody = GetComponent<Rigidbody>();
         joystickAxis = new Vector3(0, 0, 0);
-        Wind = GameObject.FindGameObjectWithTag("Wibd");
-        windTransform = Wind.GetComponent<Transform>();
         horizontalAxis = "Horizontal " + m_numJoueur;
         verticalAxis = "Vertical " + m_numJoueur;
     }
 	
 	void Update () {
         Rotate();
-        
 
+        yWind = wind.transform.eulerAngles.y;
+        myYrotate = transform.eulerAngles.y;
 
-        myYrotate = transform.rotation.y;
-        yWind = windTransform.rotation.y;
         transform.position += (transform.forward * SpeedUpdate()) * Time.deltaTime;
 
         GizmosService.Cone(transform.position, transform.forward, transform.up, 5.0f, 25.0f);
@@ -62,7 +61,12 @@ public class Deplacement : MonoBehaviour {
             yMin = yWind;
         }
         temp = yMax - yMin;
-        return (Mathf.Abs(vMax - (vMax * (Mathf.Pow(temp,rangeOfSpeed)))));
+
+		if (temp > 180)
+			temp = 360 - temp;
+
+		//Debug.Log (temp);
+        return (Mathf.Abs(vMax - (vMax * (Mathf.Pow(temp/180,rangeOfSpeed)))));
     }
 
     private void Rotate()
@@ -70,7 +74,7 @@ public class Deplacement : MonoBehaviour {
         joystickAxis.x = Input.GetAxis(horizontalAxis);
         joystickAxis.z = Input.GetAxis(verticalAxis);
 
-        if (joystickAxis == Vector3.zero)
+        /*if (joystickAxis == Vector3.zero)
             return;
 
         float angleDesired = Vector3.Angle(Vector3.forward, joystickAxis);
@@ -95,9 +99,10 @@ public class Deplacement : MonoBehaviour {
         {
             res = actualAngle - angleDesired;
             direction = res > 180 ? 1 : -1;
-        }
+        }*/
 
-        
+        float direction = Input.GetAxis(horizontalAxis);
         transform.eulerAngles += new Vector3(0, direction * 180 * Time.deltaTime * (vRotate - SpeedUpdate() / vMax), 0);
+       // Debug.Log(actualAngle + " " + angleDesired);
     }
 }

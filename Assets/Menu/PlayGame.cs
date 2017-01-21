@@ -16,6 +16,6 @@ public class PlayGame : MonoBehaviour {
 
     public void RunGame()
     {
-        SceneManager.LoadScene(0); //remplacer 0 par l'index de la scène de jeu (Qui peut être modifiée dans le Build Settings)
+        SceneManager.LoadScene(1); //remplacer 0 par l'index de la scène de jeu (Qui peut être modifiée dans le Build Settings)
     }
 }
