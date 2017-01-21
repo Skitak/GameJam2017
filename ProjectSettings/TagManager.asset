@@ -11,6 +11,7 @@ TagManager:
   - Wibd
   - Front
   - Wall
+  - Collectible
   layers:
   - Default
   - TransparentFX

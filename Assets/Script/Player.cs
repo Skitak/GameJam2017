@@ -15,6 +15,12 @@ public class Player : MonoBehaviour {
     {
 		if(pH.getInvincible() == false )
         Destroy(this.gameObject);
+
+    public void die()
+    {
+        //Destroy(this.gameObject);
+        gameObject.SetActive(false);
+        Invoke("Respawn", GameObject.Find("GameManager").GetComponent<GameManager>().respawnTime);
     }
 
     public void derive(GameObject other)
@@ -30,6 +36,14 @@ public class Player : MonoBehaviour {
         }
         transform.eulerAngles += new Vector3(0, difference / 2, 0);        
 
+    }
+
+    public void Respawn()
+    {
+        GameObject spawnPoint = GameManager.getBestSpawnPoint(this.gameObject);
+        transform.position = spawnPoint.transform.position;
+        transform.rotation = spawnPoint.transform.rotation;
+        gameObject.SetActive(true);
     }
 
 }
