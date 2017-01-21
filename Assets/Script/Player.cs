@@ -4,8 +4,16 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
 
+	private PlayerHead pH;
+
+	void Start(){
+		pH = GetComponentInChildren<PlayerHead> ();
+	}
+
+
     public void die()
     {
+		if(pH.getInvincible() == false )
         Destroy(this.gameObject);
     }
 
