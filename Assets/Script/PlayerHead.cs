@@ -8,6 +8,7 @@ public class PlayerHead : MonoBehaviour {
 	public float coefBoostSpeed;
 	public float timerBoostSpeed;
 	public float timerImmunity;
+	public shieldAnim shield;
 	private float startTime = 0.0f;
 	private bool isInvincible;
 
@@ -36,10 +37,12 @@ public class PlayerHead : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
-            other.gameObject.GetComponentInParent<Player>().die();
-        else if (other.gameObject.CompareTag("Front"))
-            GetComponentInParent<Player>().derive(other.gameObject);
+		if (other.gameObject.CompareTag ("Player"))
+			other.gameObject.GetComponentInParent<Player> ().die ();
+		else if (other.gameObject.CompareTag ("Front")) {
+			shield.show ();
+			GetComponentInParent<Player> ().derive (other.gameObject);
+		}
         else if (other.gameObject.CompareTag("Wall"))
         {
             GetComponentInParent<Player>().die();

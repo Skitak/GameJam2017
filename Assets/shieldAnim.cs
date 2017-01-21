@@ -25,7 +25,7 @@ public class shieldAnim : MonoBehaviour
 		rend.material.SetTextureOffset("_EmissionMap", new Vector2(0, offset));
 	}
 
-	IEnumerator Fade () 
+	public IEnumerator Fade () 
 	{
 		for (float f = 1f; f >= 0; f -= 0.008f) 
 		{
@@ -38,5 +38,9 @@ public class shieldAnim : MonoBehaviour
 		c2.a = 1f;
 		GetComponent<Renderer> ().material.color = c2;
 		gameObject.SetActive(false);
+	}
+
+	public void show(){
+		gameObject.SetActive (true);
 	}
 }
