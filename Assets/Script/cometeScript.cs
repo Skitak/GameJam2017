@@ -29,7 +29,6 @@ public class cometeScript : MonoBehaviour
         else if (other.gameObject.CompareTag("Player"))
         {
             other.GetComponentInParent<Player>().die();
-            Debug.Log("euh");
         }
     }
 
