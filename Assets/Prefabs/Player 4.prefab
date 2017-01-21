@@ -679,7 +679,7 @@ GameObject:
   m_Layer: 8
   m_Name: Player 4
   m_TagString: Player
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -5449,8 +5449,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 6, y: 2.380169, z: 5.166294}
-  m_Center: {x: 19.926083, y: -0.44566822, z: -9.860134}
+  m_Size: {x: 7.9372864, y: 2.380169, z: 5.166294}
+  m_Center: {x: 20.00035, y: -0.44566822, z: -9.860134}
 --- !u!65 &65852674341153870
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -5577,7 +5577,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 598064061
+  randomSeed: 1126857776
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -8657,7 +8657,7 @@ ParticleSystem:
     enabled: 1
     serializedVersion: 3
     rateOverTime:
-      scalar: 100
+      scalar: 500
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -8748,7 +8748,7 @@ ParticleSystem:
     time3: 0
     m_BurstCount: 0
   SizeModule:
-    enabled: 0
+    enabled: 1
     curve:
       scalar: 1
       maxCurve:
@@ -8763,8 +8763,8 @@ ParticleSystem:
         - serializedVersion: 2
           time: 1
           value: 0
-          inSlope: 0
-          outSlope: 0
+          inSlope: -2
+          outSlope: -2
           tangentMode: 0
         m_PreInfinity: 2
         m_PostInfinity: 2
@@ -11294,7 +11294,7 @@ ParticleSystem:
     enabled: 1
     serializedVersion: 3
     rateOverTime:
-      scalar: 100
+      scalar: 500
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -11385,7 +11385,7 @@ ParticleSystem:
     time3: 0
     m_BurstCount: 0
   SizeModule:
-    enabled: 0
+    enabled: 1
     curve:
       scalar: 1
       maxCurve:
@@ -11400,8 +11400,8 @@ ParticleSystem:
         - serializedVersion: 2
           time: 1
           value: 0
-          inSlope: 0
-          outSlope: 0
+          inSlope: -2
+          outSlope: -2
           tangentMode: 0
         m_PreInfinity: 2
         m_PostInfinity: 2
