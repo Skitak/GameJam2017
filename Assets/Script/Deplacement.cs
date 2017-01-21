@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Deplacement : MonoBehaviour {
     
-    public GameObject wind;
+    
     public int m_numJoueur;
 
     public float vMax;
@@ -23,11 +23,13 @@ public class Deplacement : MonoBehaviour {
     Transform windTransform;
     Rigidbody myRigidbody;
     Vector3 joystickAxis;
+    GameObject wind;
 
     private string horizontalAxis;
     private string verticalAxis;
     
     void Start () {
+        wind = GameObject.FindGameObjectWithTag("Wind");
         myRigidbody = GetComponent<Rigidbody>();
         joystickAxis = new Vector3(0, 0, 0);
         horizontalAxis = "Horizontal " + m_numJoueur;
@@ -72,7 +74,7 @@ public class Deplacement : MonoBehaviour {
         joystickAxis.x = Input.GetAxis(horizontalAxis);
         joystickAxis.z = Input.GetAxis(verticalAxis);
 
-        if (joystickAxis == Vector3.zero)
+        /*if (joystickAxis == Vector3.zero)
             return;
 
         float angleDesired = Vector3.Angle(Vector3.forward, joystickAxis);
@@ -97,9 +99,9 @@ public class Deplacement : MonoBehaviour {
         {
             res = actualAngle - angleDesired;
             direction = res > 180 ? 1 : -1;
-        }
+        }*/
 
-        
+        float direction = Input.GetAxis(horizontalAxis);
         transform.eulerAngles += new Vector3(0, direction * 180 * Time.deltaTime * (vRotate - SpeedUpdate() / vMax), 0);
        // Debug.Log(actualAngle + " " + angleDesired);
     }

@@ -14,11 +14,49 @@ MonoBehaviour:
   EditorBanks:
   - {fileID: 114852461590982166}
   - {fileID: 114813010402126114}
-  EditorEvents: []
+  EditorEvents:
+  - {fileID: 114746022788164348}
   MasterBankRef: {fileID: 114813010402126114}
   StringsBankRef: {fileID: 114852461590982166}
-  stringsBankWriteTime: 636205581754920501
+  stringsBankWriteTime: 636205760307173692
   cacheVersion: 2
+--- !u!114 &114239795811122554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: speed
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114746022788164348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/ship sound
+  guid: 76f87c712abd67459553c37a49ea4eab
+  Banks:
+  - {fileID: 114813010402126114}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 114239795811122554}
+  MinDistance: 0
+  MaxDistance: 0
 --- !u!114 &114813010402126114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32,11 +70,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: D:\Unity projects\GlobalGameJam2017\FMOD Project\GGJ2017\Build\Desktop\Master
     Bank.bank
-  lastModified: 636205581754910594
+  lastModified: 636205760307012172
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 9296
+    Value: 34528
   Exists: 1
 --- !u!114 &114852461590982166
 MonoBehaviour:
@@ -50,9 +88,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: FMOD Project\GGJ2017\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636205581754920501
+  lastModified: 636205760307173692
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 626
+    Value: 674
   Exists: 1

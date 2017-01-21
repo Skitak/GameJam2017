@@ -35,7 +35,6 @@ public class Wind : MonoBehaviour {
 
     private void changeDirection()
     {
-		Debug.Log ("changing dir");
         activeWind = Random.Range(0, winds.Length);
         timer = Random.Range(timer_from, timer_to);
 		timer_begin = timer;
