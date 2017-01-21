@@ -200,7 +200,7 @@ Prefab:
     - target: {fileID: 114156628062477544, guid: 459751f4f4b722448913a0dd83d74f28,
         type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1078614500477398, guid: 459751f4f4b722448913a0dd83d74f28, type: 2}
       propertyPath: m_IsActive
@@ -342,17 +342,17 @@ Prefab:
     - target: {fileID: 198470338668816002, guid: 4627aa0ae63743b468312bb06047ee38,
         type: 2}
       propertyPath: InitialModule.startLifetime.scalar
-      value: 100
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 198470338668816002, guid: 4627aa0ae63743b468312bb06047ee38,
         type: 2}
       propertyPath: randomSeed
-      value: 2045063424
+      value: -408559086
       objectReference: {fileID: 0}
     - target: {fileID: 198470338668816002, guid: 4627aa0ae63743b468312bb06047ee38,
         type: 2}
       propertyPath: TrailModule.lifetime.scalar
-      value: 0.05
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198470338668816002, guid: 4627aa0ae63743b468312bb06047ee38,
         type: 2}
@@ -362,7 +362,7 @@ Prefab:
     - target: {fileID: 198470338668816002, guid: 4627aa0ae63743b468312bb06047ee38,
         type: 2}
       propertyPath: EmissionModule.rateOverTime.scalar
-      value: 100
+      value: 4.95
       objectReference: {fileID: 0}
     - target: {fileID: 4987446936617580, guid: 4627aa0ae63743b468312bb06047ee38, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -371,7 +371,27 @@ Prefab:
     - target: {fileID: 198470338668816002, guid: 4627aa0ae63743b468312bb06047ee38,
         type: 2}
       propertyPath: InitialModule.maxNumParticles
-      value: 10000
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 198470338668816002, guid: 4627aa0ae63743b468312bb06047ee38,
+        type: 2}
+      propertyPath: lengthInSec
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 198470338668816002, guid: 4627aa0ae63743b468312bb06047ee38,
+        type: 2}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 198470338668816002, guid: 4627aa0ae63743b468312bb06047ee38,
+        type: 2}
+      propertyPath: TrailModule.ratio
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198470338668816002, guid: 4627aa0ae63743b468312bb06047ee38,
+        type: 2}
+      propertyPath: TrailModule.minVertexDistance
+      value: 1.46
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4627aa0ae63743b468312bb06047ee38, type: 2}
@@ -468,6 +488,21 @@ GameObject:
   m_PrefabParentObject: {fileID: 1107827087291452, guid: 10fe8f44a844f15418aedc4ccd1ab033,
     type: 2}
   m_PrefabInternal: {fileID: 2128395911}
+--- !u!114 &2114760350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2114760349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b4659d1fec5eb741a9205c415e84da0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  winds: []
+  timer_from: 0
+  timer_to: 0
+  transition_time: 0
 --- !u!1001 &2128395911
 Prefab:
   m_ObjectHideFlags: 0
