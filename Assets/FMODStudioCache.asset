@@ -11,89 +11,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
-  EditorBanks:
-  - {fileID: 114090353337946772}
-<<<<<<< HEAD
-  - {fileID: 114596051874253676}
+  EditorBanks: []
   EditorEvents: []
-  MasterBankRef: {fileID: 114596051874253676}
-  StringsBankRef: {fileID: 114090353337946772}
-  stringsBankWriteTime: 636205589247479521
-=======
-  - {fileID: 114593765692143058}
-  EditorEvents: []
-  MasterBankRef: {fileID: 114593765692143058}
-  StringsBankRef: {fileID: 114090353337946772}
-  stringsBankWriteTime: 636205581754920501
->>>>>>> 62035aac8d11adfaed5c464a51412bda28653506
+  MasterBankRef: {fileID: 0}
+  StringsBankRef: {fileID: 0}
+  stringsBankWriteTime: 0
   cacheVersion: 2
---- !u!114 &114090353337946772
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: FMOD Project\GGJ2017\Build\Desktop\Master Bank.strings.bank
-<<<<<<< HEAD
-  lastModified: 636205589247479521
-=======
-  lastModified: 636205581754920501
->>>>>>> 62035aac8d11adfaed5c464a51412bda28653506
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 626
-  Exists: 1
-<<<<<<< HEAD
---- !u!114 &114596051874253676
-=======
---- !u!114 &114593765692143058
->>>>>>> 62035aac8d11adfaed5c464a51412bda28653506
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-<<<<<<< HEAD
-  Path: C:\Users\mathi\Desktop\GlobalGameJam\2017\GameJam2017\FMOD Project\GGJ2017\Build\Desktop\Master
-    Bank.bank
-  lastModified: 636205589247323241
-=======
-  Path: D:\Unity projects\GlobalGameJam2017\FMOD Project\GGJ2017\Build\Desktop\Master
-    Bank.bank
-  lastModified: 636205581754910594
->>>>>>> 62035aac8d11adfaed5c464a51412bda28653506
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 9296
-  Exists: 1
---- !u!114 &114733031697053224
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: D:\Users\logan\Documents\Project\GGJ2017\FMOD Project\GGJ2017\Build\Desktop\Master
-    Bank.bank
-  lastModified: 636205560062450765
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 9296
-  Exists: 1
