@@ -9,12 +9,30 @@ public class PlayerHead : MonoBehaviour {
 		
 	}
 
-    private void OnTriggerEnter(Collider other)
+    /*private void OnCollisionEnter(Collision other)
     {
+        Debug.Log("done");
         if (other.gameObject.CompareTag("Player"))
             other.gameObject.GetComponentInParent<Player>().die();
         else
             GetComponentInParent<Player>().die();
+    }*/
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("done");
+        if (other.gameObject.CompareTag("Player"))
+            other.gameObject.GetComponentInParent<Player>().die();
+        else if (other.gameObject.CompareTag("Front"))
+            GetComponentInParent<Player>().derive(other.gameObject);
+        else if (other.gameObject.CompareTag("Wall"))
+        {
+            GetComponentInParent<Player>().die();
+            //transform.parent.forward *= -1;
+        }
+        else
+            GetComponentInParent<Player>().die();
     }
-  
+
+
 }

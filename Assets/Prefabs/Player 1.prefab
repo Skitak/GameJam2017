@@ -5404,7 +5404,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_numJoueur: 1
-  vMax: 30
+  vMax: 60
   vRotate: 1.5
   rangeOfSpeed: 2
 --- !u!114 &114633363888450816

@@ -7,6 +7,10 @@ TagManager:
   - Buttons
   - Escape
   - EscapeTag
+  - Wind
+  - Wibd
+  - Front
+  - Wall
   layers:
   - Default
   - TransparentFX
@@ -43,4 +47,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Foreground
+    uniqueID: 1553988467
     locked: 0
