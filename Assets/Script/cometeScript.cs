@@ -9,6 +9,7 @@ public class cometeScript : MonoBehaviour
     private void Start()
     {
         rigid = GetComponent<Rigidbody>();
+		Destroy (gameObject, 10);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -36,4 +37,5 @@ public class cometeScript : MonoBehaviour
     {
         rigid.velocity = transform.forward * m_speed;
     }
+		
 }
