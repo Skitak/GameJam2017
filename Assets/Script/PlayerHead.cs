@@ -20,7 +20,6 @@ public class PlayerHead : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("done");
         if (other.gameObject.CompareTag("Player"))
             other.gameObject.GetComponentInParent<Player>().die();
         else if (other.gameObject.CompareTag("Front"))
