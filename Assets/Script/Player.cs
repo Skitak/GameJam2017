@@ -14,11 +14,13 @@ public class Player : MonoBehaviour {
 
 
     public void die()
-    {
-        //Destroy(this.gameObject);
-        gameObject.SetActive(false);
-        Invoke("Respawn", GameObject.Find("GameManager").GetComponent<GameManager>().respawnTime);
-    }
+	{
+		if (!pH.getInvincible ()) {
+			//Destroy(this.gameObject);
+			gameObject.SetActive (false);
+			Invoke ("Respawn", GameObject.Find ("GameManager").GetComponent<GameManager> ().respawnTime);
+		}
+	}
 
     public void derive(GameObject other)
     {
