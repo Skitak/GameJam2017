@@ -28,6 +28,6 @@ public class Wind : MonoBehaviour {
         activeWind = Random.Range(0, winds.Length);
         timer = Random.Range(timer_from, timer_to);
         //Sound & animation
-        transform.position = winds[activeWind].transform.position;
+        transform.rotation = winds[activeWind].transform.rotation;
     }
 }
