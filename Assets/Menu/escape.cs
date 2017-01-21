@@ -10,7 +10,7 @@ public class escape : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKey(KeyCode.Escape))
+		if (Input.GetButton("Cancel"))
         {
 			Buttons.SetActive (true);
 			ourButtons.SetActive (false);
