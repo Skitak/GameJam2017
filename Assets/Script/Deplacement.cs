@@ -59,6 +59,11 @@ public class Deplacement : MonoBehaviour {
             yMin = yWind;
         }
         temp = yMax - yMin;
+
+		if (temp > 180)
+			temp = 360 - temp;
+
+		//Debug.Log (temp);
         return (Mathf.Abs(vMax - (vMax * (Mathf.Pow(temp/180,rangeOfSpeed)))));
     }
 
@@ -96,6 +101,6 @@ public class Deplacement : MonoBehaviour {
 
         
         transform.eulerAngles += new Vector3(0, direction * 180 * Time.deltaTime * (vRotate - SpeedUpdate() / vMax), 0);
-        Debug.Log(actualAngle + " " + angleDesired);
+       // Debug.Log(actualAngle + " " + angleDesired);
     }
 }
