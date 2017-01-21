@@ -11,10 +11,7 @@ public class Player : MonoBehaviour {
 	}
 
 
-    public void die()
-    {
-		if(pH.getInvincible() == false )
-        Destroy(this.gameObject);
+
 
     public void die()
     {
