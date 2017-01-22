@@ -45,7 +45,7 @@ public class Deplacement : MonoBehaviour {
 
     }
 
-    float SpeedUpdate()
+    public float SpeedUpdate()
     {
         if ((myYrotate - yWind) < 0)
         {

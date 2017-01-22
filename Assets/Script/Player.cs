@@ -54,7 +54,7 @@ public class Player : MonoBehaviour {
 
     public void derive(GameObject other)
     {
-        float difference,myY,hisY;
+        /*float difference,myY,hisY;
         myY = this.transform.eulerAngles.y;
         hisY = other.transform.eulerAngles.y;
         if (myY < hisY)
@@ -63,7 +63,31 @@ public class Player : MonoBehaviour {
         {
             difference = this.transform.eulerAngles.y - other.transform.eulerAngles.y;
         }
-        transform.eulerAngles += new Vector3(0, difference / 2, 0);        
+        transform.eulerAngles += new Vector3(0, difference / 2, 0);*/
+
+		Rigidbody otherRigidbody = other.gameObject.GetComponentInParent<Rigidbody> ();
+		Rigidbody myRigidbody = GetComponent<Rigidbody> ();
+		float myAngle = transform.eulerAngles.y;
+		float otherAngle = other.transform.eulerAngles.y;
+
+		float myVelocity = GetComponent<Deplacement>().SpeedUpdate();
+		float otherVelocity = other.GetComponentInParent<Deplacement>().SpeedUpdate();
+
+		float angleDesired = Vector3.Angle (other.transform.forward, transform.forward);
+		float multiplier;
+		float direction = (transform.forward.z * other.transform.forward.z > 0 ? -1 : 1);
+		if (myVelocity > otherVelocity) {
+			multiplier = (myVelocity - otherVelocity) / GetComponent<Deplacement>().vMax;
+
+		} else {
+			angleDesired = 180f - angleDesired;
+			multiplier =  1 - ((myVelocity - otherVelocity) / GetComponent<Deplacement>().vMax);
+			direction *= -1;
+		}
+		float actualAngle = angleDesired * multiplier * direction + otherAngle;
+		Vector3 angle = new Vector3 (0, actualAngle, 0);
+		transform.eulerAngles = angle;
+
 
     }
 
