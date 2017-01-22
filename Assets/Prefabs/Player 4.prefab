@@ -60,6 +60,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1025164990574624
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4698420726567358}
+  - component: {fileID: 65999381414890458}
+  - component: {fileID: 114891331627005752}
+  m_Layer: 8
+  m_Name: Large Collider
+  m_TagString: Sound Trigger
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1029869357859004
 GameObject:
   m_ObjectHideFlags: 1
@@ -1830,7 +1847,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4778593773933142}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4230737962700794
 Transform:
@@ -2228,7 +2245,7 @@ Transform:
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children: []
   m_Father: {fileID: 4778593773933142}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4543001815464508
 Transform:
@@ -2312,7 +2329,7 @@ Transform:
   - {fileID: 4562758291095396}
   - {fileID: 4859772732301210}
   m_Father: {fileID: 4778593773933142}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!4 &4588087058374574
 Transform:
@@ -2392,6 +2409,19 @@ Transform:
   m_Father: {fileID: 4393147353384498}
   m_RootOrder: 41
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4698420726567358
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1025164990574624}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4778593773933142}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4702400829423932
 Transform:
   m_ObjectHideFlags: 1
@@ -2450,10 +2480,11 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1462129228018552}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -132.9, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: 0.47390953, z: -0, w: 0.8805736}
+  m_LocalPosition: {x: -149.8, y: 0, z: -82}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 4698420726567358}
   - {fileID: 4514721766496254}
   - {fileID: 4997694421594782}
   - {fileID: 4218191715554462}
@@ -2657,7 +2688,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4778593773933142}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4973759221009650
 Transform:
@@ -2696,7 +2727,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4778593773933142}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23004600313027306
 MeshRenderer:
@@ -5526,6 +5557,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 6, y: 4.0801554, z: 13.979255}
   m_Center: {x: 20.02726, y: -1.2650847, z: -0.96037245}
+--- !u!65 &65999381414890458
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1025164990574624}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 11.901945, y: 6.9223366, z: 20.015188}
+  m_Center: {x: 0.10146868, y: -1.2834473, z: 2.7698212}
 --- !u!114 &114162787116311630
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5608,6 +5651,17 @@ MonoBehaviour:
   prefab_exp: {fileID: 1383519797938636}
   nbPtsSec: 0
   slider: {fileID: 0}
+--- !u!114 &114891331627005752
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1025164990574624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cde1adb17d44164d90511b0da05b7ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!198 &198193515870383852
 ParticleSystem:
   m_ObjectHideFlags: 1

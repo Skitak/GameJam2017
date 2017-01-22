@@ -495,6 +495,7 @@ GameObject:
   - component: {fileID: 114024178369362716}
   - component: {fileID: 114768743247145958}
   - component: {fileID: 54354368108723498}
+  - component: {fileID: 114088782328320436}
   m_Layer: 8
   m_Name: Player 1
   m_TagString: Player
@@ -1428,6 +1429,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1948693588050256
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4776981402183564}
+  - component: {fileID: 65070200378803702}
+  - component: {fileID: 114277186495972046}
+  m_Layer: 8
+  m_Name: Large Collider
+  m_TagString: Sound Trigger
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1959672822287206
 GameObject:
   m_ObjectHideFlags: 1
@@ -1984,7 +2002,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4572946015556380}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4307415849086798
 Transform:
@@ -2213,18 +2231,19 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1466880758238760}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 127.02, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0.57928866, z: -0, w: 0.81512254}
+  m_LocalPosition: {x: 172.42, y: 0, z: -84.68}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4520421020320092}
   - {fileID: 4539162895139764}
   - {fileID: 4586020513426604}
   - {fileID: 4900603257146280}
+  - {fileID: 4776981402183564}
   - {fileID: 4302303167242808}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -58.893, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -70.801, z: 0}
 --- !u!4 &4584080263296660
 Transform:
   m_ObjectHideFlags: 1
@@ -2386,6 +2405,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4010239209787172}
   m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4776981402183564
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1948693588050256}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4572946015556380}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4793524120549774
 Transform:
@@ -5512,6 +5544,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 7.7400093, y: 2.380169, z: 5.166294}
   m_Center: {x: 19.95552, y: -0.44566822, z: -9.860134}
+--- !u!65 &65070200378803702
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1948693588050256}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 11.901945, y: 6.9223366, z: 20.015188}
+  m_Center: {x: 0.10146868, y: -1.2834473, z: 2.7698212}
 --- !u!65 &65726544627556932
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -5549,6 +5593,31 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4a1af80f3c33e574b87a61b39c72835c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114088782328320436
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1466880758238760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be882eead2a2ffb4cb47471fa990245a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destruction: event:/Ships/ship_destruction
+  contact: event:/Ships/ship_contact
+  hit: event:/Ships/ship_hit
+--- !u!114 &114277186495972046
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1948693588050256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cde1adb17d44164d90511b0da05b7ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &114633363888450816

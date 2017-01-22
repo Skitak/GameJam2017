@@ -98,6 +98,9 @@
         <property name="pitch">
             <value>-4</value>
         </property>
+        <relationship name="fadeOutCurve">
+            <destination>{182fa601-bfed-4c5b-a123-eb31957be8d4}</destination>
+        </relationship>
         <relationship name="sounds">
             <destination>{abe0bfde-2611-4c02-9675-7009f9d32dd5}</destination>
             <destination>{62b87d6c-f614-4a84-a0fb-963db4014751}</destination>
@@ -128,6 +131,14 @@
     </object>
     <object class="MixerBusPanner" id="{42d72fd5-586c-4086-ad0e-ae74308d11d0}"/>
     <object class="MixerBusFader" id="{a0a6e99f-6f87-4e17-92e0-0e7b09341dc3}"/>
+    <object class="FadeCurve" id="{182fa601-bfed-4c5b-a123-eb31957be8d4}">
+        <relationship name="startPoint">
+            <destination>{952d8330-f0ba-4323-8db5-81dc9b9eca94}</destination>
+        </relationship>
+        <relationship name="endPoint">
+            <destination>{afe3f5b1-4389-4305-aacf-ddf4dffdaf51}</destination>
+        </relationship>
+    </object>
     <object class="SingleSound" id="{abe0bfde-2611-4c02-9675-7009f9d32dd5}">
         <relationship name="audioFile">
             <destination>{a78cb29f-735b-4080-8381-64c5a3f09b31}</destination>
@@ -166,6 +177,25 @@
     </object>
     <object class="MixerBusPanner" id="{634795c7-7d36-476e-8a96-25dcd4f54d33}"/>
     <object class="MixerBusFader" id="{4e110868-e8fa-4ad3-921a-959d8a712f13}"/>
+    <object class="AutomationPoint" id="{952d8330-f0ba-4323-8db5-81dc9b9eca94}">
+        <property name="position">
+            <value>1.5600000000000001</value>
+        </property>
+        <property name="value">
+            <value>1</value>
+        </property>
+        <property name="curveShape">
+            <value>-0.126725644</value>
+        </property>
+    </object>
+    <object class="AutomationPoint" id="{afe3f5b1-4389-4305-aacf-ddf4dffdaf51}">
+        <property name="position">
+            <value>2</value>
+        </property>
+        <property name="value">
+            <value>0</value>
+        </property>
+    </object>
     <object class="CompressorEffect" id="{3180cb3e-aa41-4d52-95b5-f13de63c2e42}">
         <property name="threshold">
             <value>-7.5</value>
