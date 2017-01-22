@@ -35,6 +35,7 @@ public class Player : MonoBehaviour {
 	{
 		if (!pH.getInvincible ())
         {
+            GetComponent<PlayerSound>().OnDie();
             explosion.transform.position = transform.position;
             explosion.gameObject.SetActive(true);
             explosion.Play();
@@ -48,8 +49,9 @@ public class Player : MonoBehaviour {
             gameObject.SetActive (false);
 			//if(GameObject.Find("GameManager").GetComponents<GameManager>() == null)
 			Invoke ("Respawn", Manager.respawnTimer());
-			//else
-				//Invoke ("Respawn", GameObject.Find ("GameManager").GetComponent<GameManager> ().respawnTime);
+            //else
+            //Invoke ("Respawn", GameObject.Find ("GameManager").GetComponent<GameManager> ().respawnTime);
+            
 			
 		}
 	}
