@@ -12,6 +12,7 @@ public class Deplacement : MonoBehaviour {
 
     [Range(1.0f, 2.0f)]
     public  float rangeOfSpeed;
+    public ParticleSystem particules;
 
     float yWind;
     float yMin;
@@ -19,6 +20,7 @@ public class Deplacement : MonoBehaviour {
     float myYrotate;
     float axe;
     float temp;
+    bool moved = false;
 
     Transform windTransform;
     Rigidbody myRigidbody;
@@ -35,11 +37,20 @@ public class Deplacement : MonoBehaviour {
     }
 	
 	void Update () {
-        Rotate();
+        if (moved)
+        {
+            Rotate();
 
-        yWind = wind.transform.eulerAngles.y;
-        myYrotate = transform.eulerAngles.y;
-		myRigidbody.velocity = transform.forward * SpeedUpdate();
+            yWind = wind.transform.eulerAngles.y;
+            myYrotate = transform.eulerAngles.y;
+            myRigidbody.velocity = transform.forward * SpeedUpdate();
+        }
+        else if (Input.GetAxis(horizontalAxis) != 0)
+        {
+            moved = true;
+            particules.gameObject.SetActive(true);
+            particules.Play();
+        }
 
         //GizmosService.Cone(transform.position, transform.forward, transform.up, 5.0f, 25.0f);
 
