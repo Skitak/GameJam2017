@@ -249,9 +249,9 @@ InputManager:
     m_Name: Submit
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: 
+    negativeButton: joystick button 7
     positiveButton: return
-    altNegativeButton: 
+    altNegativeButton: escape
     altPositiveButton: joystick button 0
     gravity: 1000
     dead: 0.001

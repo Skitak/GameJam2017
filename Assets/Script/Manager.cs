@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public abstract class Manager : MonoBehaviour {
 
@@ -44,7 +45,8 @@ public abstract class Manager : MonoBehaviour {
     }
 
 	public static void won (Player p){
-        manager.buttons.active = true;
+        manager.buttons.SetActive(true);
+        manager.buttons.GetComponentInChildren<Text>().text = p.gameObject.name + " wins";
 	}
 
     public static bool deathMatch()
@@ -55,5 +57,10 @@ public abstract class Manager : MonoBehaviour {
     public static bool captureFlag()
     {
         return !deathMatch();
+    }
+
+    public void endAction()
+    {
+        //TODO
     }
 }

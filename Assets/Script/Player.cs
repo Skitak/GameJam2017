@@ -27,6 +27,8 @@ public class Player : MonoBehaviour {
 			nbScore += (float) nbPtsSec * Time.deltaTime;
 			if (slider != null)
                 slider.value = nbScore;
+            if (nbScore >= GameManage2.getScoreRequired())
+                GameManage2.won(this);
 		}
 
 	}
