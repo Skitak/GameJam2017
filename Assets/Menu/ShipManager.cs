@@ -9,15 +9,21 @@ public class ShipManager : MonoBehaviour {
 	public GameObject ButtonsMenu;
 	public GameObject EscapeObj;
 	public GameObject ButtonsSelection;
+    public GameObject ChxDM;
+    public GameObject ChxF;
+    public GameObject gen;
 
-	private Vector3 origin;
+    private Vector3 origin;
 
 	void Start () {
 		origin = ShipInMovement.transform.position;
-		ButtonsMenu.SetActive (true);
-		EscapeObj.SetActive(false);
-		ButtonsSelection.SetActive (false);
-	}
+        ButtonsMenu.SetActive(true);
+        ButtonsSelection.SetActive(false);
+        ChxDM.SetActive(false);
+        ChxF.SetActive(false);
+        EscapeObj.SetActive(false);
+        gen.SetActive(false);
+    }
 
 
 	void Update () {
