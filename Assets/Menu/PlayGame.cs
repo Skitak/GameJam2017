@@ -5,9 +5,9 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class PlayGame : MonoBehaviour {
-	public GameObject ButtonsMenu;
-	public GameObject EscapeObj;
-	public GameObject ButtonsSelection;
+	private GameObject ButtonsMenu;
+    private GameObject EscapeObj;
+    private GameObject ButtonsSelection;
 
 	void Start () {
 		ButtonsMenu = GetComponentInParent<ShipManager> ().ButtonsMenu;

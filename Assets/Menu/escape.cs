@@ -16,6 +16,7 @@ public class escape : MonoBehaviour {
 			ButtonsMenu.SetActive (true);
 			ourButtons.SetActive (false);
 			ButtonsSelection.SetActive (false);
+            ShipManager.IsClick = false;
         }
 	}
 }

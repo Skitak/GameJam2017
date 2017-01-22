@@ -4,9 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Generique : MonoBehaviour {
-	public GameObject ButtonsMenu;
-	public GameObject EscapeObj;
-	public GameObject ButtonsSelection;
+    private GameObject ButtonsMenu;
+    private GameObject EscapeObj;
+    private GameObject ButtonsSelection;
 
 	void Start () {
 		ButtonsMenu = GetComponentInParent<ShipManager> ().ButtonsMenu;
