@@ -26,14 +26,12 @@ public class Deplacement : MonoBehaviour {
     GameObject wind;
 
     private string horizontalAxis;
-    private string verticalAxis;
     
     void Start () {
         wind = GameObject.FindGameObjectWithTag("Wind");
         myRigidbody = GetComponent<Rigidbody>();
         joystickAxis = new Vector3(0, 0, 0);
         horizontalAxis = "Horizontal " + m_numJoueur;
-        verticalAxis = "Vertical " + m_numJoueur;
     }
 	
 	void Update () {
@@ -41,10 +39,9 @@ public class Deplacement : MonoBehaviour {
 
         yWind = wind.transform.eulerAngles.y;
         myYrotate = transform.eulerAngles.y;
+		myRigidbody.velocity = transform.forward * SpeedUpdate();
 
-        transform.position += (transform.forward * SpeedUpdate()) * Time.deltaTime;
-
-        GizmosService.Cone(transform.position, transform.forward, transform.up, 5.0f, 25.0f);
+        //GizmosService.Cone(transform.position, transform.forward, transform.up, 5.0f, 25.0f);
 
     }
 
@@ -72,7 +69,6 @@ public class Deplacement : MonoBehaviour {
     private void Rotate()
     {
         joystickAxis.x = Input.GetAxis(horizontalAxis);
-        joystickAxis.z = Input.GetAxis(verticalAxis);
 
         /*if (joystickAxis == Vector3.zero)
             return;

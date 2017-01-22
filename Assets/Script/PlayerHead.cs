@@ -45,26 +45,19 @@ public class PlayerHead : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            other.gameObject.GetComponentInParent<Player>().die();
-            /*++nbKill;
+		if (other.gameObject.CompareTag ("Player")) {
+			other.gameObject.GetComponentInParent<Player> ().die ();
+			/*++nbKill;
             m_text.text = nbKill.ToString();
             if (nbKill > GameManager.getNbKillRequired())
                 GameManager.won(GetComponentInParent<Player>());*/
-        }
-        else if (other.gameObject.CompareTag("Front"))
-        {
-            shield.show();
-            GetComponentInParent<Player>().derive(other.gameObject);
-        }
-        else if (other.gameObject.CompareTag("Wall"))
-        {
-            GetComponentInParent<Player>().die();
-            //transform.parent.forward *= -1;
-        }
-        else if (other.gameObject.CompareTag("Collectible"))
-        {
+		} else if (other.gameObject.CompareTag ("Front")) {
+			shield.show ();
+			GetComponentInParent<Player> ().derive (other.gameObject);
+		} else if (other.gameObject.CompareTag ("Wall")) {
+			GetComponentInParent<Player> ().die ();
+			//transform.parent.forward *= -1;
+		} else if (other.gameObject.CompareTag ("Collectible")) {
 			if (other.name == "collectibleVitesse") {
 				Destroy (other.gameObject);
 				dep.vMax = dep.vMax * coefBoostSpeed;
@@ -81,7 +74,8 @@ public class PlayerHead : MonoBehaviour {
 				isFlagged = true;
 			}
 				
-        }
+		} else if (other.gameObject.CompareTag ("Comete"))
+			return;
         else
             GetComponentInParent<Player>().die();
     }
