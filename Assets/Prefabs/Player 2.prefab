@@ -1403,6 +1403,7 @@ GameObject:
   - component: {fileID: 114599110025212468}
   - component: {fileID: 114429737918127208}
   - component: {fileID: 54247188934496140}
+  - component: {fileID: 114778967487579824}
   m_Layer: 8
   m_Name: Player 2
   m_TagString: Player
@@ -1702,8 +1703,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1813826748241710}
-  m_LocalRotation: {x: -0, y: 0.9384064, z: -0, w: 0.34553364}
-  m_LocalPosition: {x: -145.7, y: 0, z: 79.6}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 40, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4212152186089100}
@@ -5624,6 +5625,20 @@ MonoBehaviour:
   vRotate: 1.5
   rangeOfSpeed: 2
   particules: {fileID: 198297272446443876}
+--- !u!114 &114778967487579824
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1813826748241710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be882eead2a2ffb4cb47471fa990245a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destruction: event:/Ships/ship_destruction
+  contact: event:/Ships/ship_contact
+  hit: event:/Ships/ship_hit
 --- !u!114 &114872712913731056
 MonoBehaviour:
   m_ObjectHideFlags: 1
