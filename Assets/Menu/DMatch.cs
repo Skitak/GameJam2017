@@ -1,33 +1,44 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.SceneManagement;
+
 
 public class DMatch : MonoBehaviour {
 
-	private  GameObject ShipInMovement;
+    private GameObject ButtonsMenu;
+    private GameObject EscapeObj;
+    private GameObject ButtonsSelection;
+    private GameObject ChxDM;
+    private GameObject ChxF;
 
-	void Start () {
-		ShipInMovement = GetComponentInParent<ShipManager>().ShipInMovement;
-	}
+    void Start () {
+        ButtonsMenu = GetComponentInParent<ShipManager>().ButtonsMenu;
+        ButtonsSelection = GetComponentInParent<ShipManager>().ButtonsSelection;
+        EscapeObj = GetComponentInParent<ShipManager>().EscapeObj;
+        ChxDM = GetComponentInParent<ShipManager>().ChxDM;
+        ChxF = GetComponentInParent<ShipManager>().ChxF;
+    }
 	
 
 	void Update () {
-		if(ShipManager.IsClick)
-			ShipInMovement.transform.position = 
-				new Vector3 (ShipInMovement.transform.position.x, 
-					ShipInMovement.transform.position.y, 
-						ShipInMovement.transform.position.z  - 10f * Time.deltaTime);
-	}
+        if (Input.GetButton("Cancel"))
+        {
+            ButtonsMenu.SetActive(true);
+            ButtonsSelection.SetActive(false);
+            ChxDM.SetActive(false);
+            ChxF.SetActive(false);
+            EscapeObj.SetActive(false);
+        }
+    }
 
 	public void RunDeathMatch()
 	{
-		ShipManager.IsClick = true;
-		Invoke ("Toward", 3);
-	}
+        ButtonsMenu.SetActive(false);
+        EscapeObj.SetActive(true);
+        ButtonsSelection.SetActive(false);
+        ChxF.SetActive(false);
+        ChxDM.SetActive(true);
+    }
 
-	public void Toward(){
-		SceneManager.LoadScene(1);
-	}
+	
 }
