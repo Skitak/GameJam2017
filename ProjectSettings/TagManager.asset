@@ -12,6 +12,7 @@ TagManager:
   - Front
   - Wall
   - Collectible
+  - Sound Trigger
   layers:
   - Default
   - TransparentFX
