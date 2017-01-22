@@ -988,59 +988,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4338561943819670, guid: c7e2fd2490bf9174691ca947843f779a,
     type: 2}
   m_PrefabInternal: {fileID: 670851582}
---- !u!1 &730457179
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 730457180}
-  - component: {fileID: 730457182}
-  - component: {fileID: 730457181}
-  m_Layer: 8
-  m_Name: Large Collider
-  m_TagString: Sound Trigger
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &730457180
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 730457179}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1228558452}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &730457181
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 730457179}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cde1adb17d44164d90511b0da05b7ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!65 &730457182
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 730457179}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 11.901945, y: 6.9223366, z: 20.015188}
-  m_Center: {x: 0.10146868, y: -1.2834473, z: 2.7698212}
 --- !u!1001 &967242894
 Prefab:
   m_ObjectHideFlags: 0
@@ -1604,25 +1551,6 @@ GameObject:
   m_PrefabParentObject: {fileID: 1466880758238760, guid: b733c9aab3bcd6e4393af6fe92949e34,
     type: 2}
   m_PrefabInternal: {fileID: 1411754414}
---- !u!114 &1228558448
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1228558447}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be882eead2a2ffb4cb47471fa990245a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destruction: event:/Ships/ship_destruction
-  contact: event:/Ships/ship_contact
-  hit: event:/Ships/ship_hit
---- !u!4 &1228558452 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4572946015556380, guid: b733c9aab3bcd6e4393af6fe92949e34,
-    type: 2}
-  m_PrefabInternal: {fileID: 1411754414}
 --- !u!1 &1355700317
 GameObject:
   m_ObjectHideFlags: 0
@@ -1686,7 +1614,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4572946015556380, guid: b733c9aab3bcd6e4393af6fe92949e34, type: 2}
       propertyPath: m_LocalRotation.y
-      value: -0.5792886
+      value: -0.57928866
       objectReference: {fileID: 0}
     - target: {fileID: 4572946015556380, guid: b733c9aab3bcd6e4393af6fe92949e34, type: 2}
       propertyPath: m_LocalRotation.z
@@ -1694,7 +1622,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4572946015556380, guid: b733c9aab3bcd6e4393af6fe92949e34, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0.8151225
+      value: 0.81512254
       objectReference: {fileID: 0}
     - target: {fileID: 4572946015556380, guid: b733c9aab3bcd6e4393af6fe92949e34, type: 2}
       propertyPath: m_RootOrder
@@ -1705,14 +1633,6 @@ Prefab:
       propertyPath: m_text
       value: 
       objectReference: {fileID: 1175108586}
-    - target: {fileID: 1466880758238760, guid: b733c9aab3bcd6e4393af6fe92949e34, type: 2}
-      propertyPath: m_Name
-      value: Player 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4572946015556380, guid: b733c9aab3bcd6e4393af6fe92949e34, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -70.801
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b733c9aab3bcd6e4393af6fe92949e34, type: 2}
   m_IsPrefabParent: 0
