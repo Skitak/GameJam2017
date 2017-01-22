@@ -55,9 +55,11 @@ public class PlayerHead : MonoBehaviour {
             other.gameObject.GetComponentInParent<Player>().die();
             ++nbKill;
             if (m_text != null)
+            {
                 m_text.text = nbKill.ToString();
-            if (Manager.deathMatch() && nbKill > GameManager.getNbKillRequired())
-                GameManager.won(GetComponentInParent<Player>());
+                if (nbKill >= GameManager.getNbKillRequired())
+                    GameManager.won(GetComponentInParent<Player>());
+            }
             audio.OnHit();
         }
         else if (other.gameObject.CompareTag("Front"))
