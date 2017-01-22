@@ -4,22 +4,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GameManager : MonoBehaviour {
+public class GameManager : Manager {
 
-    public GameObject[] players;
-    public GameObject[] spawners;
-    public float respawnTime;
     public int nbKillRequired;
     public float m_time_end;
     public Text m_text;
 
     private float timer;
-    private static GameManager instance;
 
     void Awake()
     {
-        if (instance == null)
-            instance = this;
+        if (Manager.manager == null)
+			Manager.manager = this;
     }
 
     // Use this for initialization
@@ -51,41 +47,16 @@ public class GameManager : MonoBehaviour {
         won(winner.GetComponent<Player>());
     }
 
-    public static GameObject getBestSpawnPoint(GameObject playerOut)
-    {
-        //calcul de la moyenne des positions des autres joueurs
-        Vector3 moyenne = Vector3.zero;
-        foreach(GameObject player in instance.players)
-        {
-            if(player != playerOut)
-            {
-                moyenne += player.transform.position;
-            }
-        }
-        moyenne /= (instance.players.Length - 1);
-        
-        float distance = 0;
-        GameObject spawnPoint = null;
-        foreach(GameObject point in instance.spawners)
-        {
-            float distanceNew = (moyenne - point.transform.position).magnitude;
-            if(distanceNew >= distance)
-            {
-                distance = distanceNew;
-                spawnPoint = point;
-            }
-        }
-        return spawnPoint;
-    }
+    
 
     public static int getNbKillRequired()
     {
-        return instance.nbKillRequired;
+		return ((GameManager)Manager.manager).nbKillRequired;
     }
 
     public static void won(Player p)
     {
-        //TODO fin de partie
+        //TODO pls
     }
 
 } 

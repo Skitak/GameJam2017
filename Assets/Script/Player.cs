@@ -38,7 +38,8 @@ public class Player : MonoBehaviour {
             explosion.gameObject.SetActive(true);
             explosion.Play();
 			if (pH.getFlagged () == true) {
-				pH.getFils().transform.DetachChildren();
+				pH.getFils().transform.parent = null;
+				pH.getFils ().transform.position = Vector3.zero;
 				pH.setFlagged (false);
 			}
 

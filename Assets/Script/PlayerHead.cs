@@ -68,6 +68,8 @@ public class PlayerHead : MonoBehaviour {
 				isInvincible = true;
 				Invoke ("ImmunityTimer", timerImmunity);
 			} else if (other.name == "flag") {
+				if (other.transform.parent != null)
+					return;
 				other.transform.SetParent (this.transform);
 				other.transform.position = Vector3.zero;
 				fils = other.gameObject;
