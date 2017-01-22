@@ -46,7 +46,4 @@ public class GameManage2 : Manager {
 		return ( (GameManage2) Manager.manager).nbScoreRequired;
 	}
 
-	public static void won(Player p){
-		//TODO
-	}
 }

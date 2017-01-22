@@ -47,7 +47,7 @@ public class Wind : MonoBehaviour {
 
         timer -= Time.deltaTime;
 
-        if (timer <= feedbackTimeBeforeWindChange && windChangeRoutine == null)
+        if (timer <= feedbackTimeBeforeWindChange && windChangeRoutine == null && windFeedbackGo != null)
         {
             windChangeRoutine = StartCoroutine("WindChange");
            

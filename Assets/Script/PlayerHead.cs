@@ -94,6 +94,8 @@ public class PlayerHead : MonoBehaviour {
                 other.transform.position = Vector3.zero;
                 fils = other.gameObject;
                 isFlagged = true;
+                dep.vMax = dep.vMax * coefBoostSpeed;
+                dep.vRotate = dep.vRotate * coefBoostSpeed;
             }
 
         }
@@ -127,7 +129,7 @@ public class PlayerHead : MonoBehaviour {
 		return(fils);
 	}
 
-	void SpeedTimer()
+	public void SpeedTimer()
 	{
 		dep.vMax = baseSpeed;
 		dep.vRotate = baseRotation;

@@ -33,6 +33,7 @@ public class Player : MonoBehaviour {
 
     public void die()
 	{
+        GetComponent<PlayerSound>().OnDie();
 		if (!pH.getInvincible ())
         {
             explosion.transform.position = transform.position;
@@ -42,6 +43,7 @@ public class Player : MonoBehaviour {
 				pH.getFils().transform.parent = null;
 				pH.getFils ().transform.position = Vector3.zero;
 				pH.setFlagged (false);
+                pH.SpeedTimer();
 			}
 
             //Destroy(this.gameObject);

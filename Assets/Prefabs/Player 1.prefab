@@ -5562,7 +5562,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e49cd4ad0a75e54f96950a75e192120, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coefBoostSpeed: 2
+  coefBoostSpeed: 1.5
   timerBoostSpeed: 10
   timerImmunity: 0
   shield: {fileID: 0}

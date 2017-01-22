@@ -54,9 +54,4 @@ public class GameManager : Manager {
 		return ((GameManager)Manager.manager).nbKillRequired;
     }
 
-    public static void won(Player p)
-    {
-        //TODO pls
-    }
-
 } 

@@ -9,6 +9,7 @@ public abstract class Manager : MonoBehaviour {
 	public GameObject[] players;
 	public GameObject[] spawners;
 	public float respawnTime;
+    public GameObject buttons;
 
 	public static GameObject getBestSpawnPoint(GameObject playerOut)
 	{
@@ -42,8 +43,8 @@ public abstract class Manager : MonoBehaviour {
         return manager.respawnTime;
     }
 
-	public static void win (Player p){
-		
+	public static void won (Player p){
+        manager.buttons.active = true;
 	}
 
     public static bool deathMatch()
