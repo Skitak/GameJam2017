@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.08.00">
+    <object class="AudioFile" id="{717b852f-4e21-470d-8cbc-1b467c68d0ff}">
+        <property name="assetPath">
+            <value>Ship/Metal Hit/Metal Strike 05.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>0.97918367346938773</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{0fe42932-cf3a-41d9-a1aa-01e4b9c8f3fb}</destination>
+        </relationship>
+    </object>
+</objects>
