@@ -18,6 +18,6 @@ public class ShipManager : MonoBehaviour {
 		if (!ShipManager.IsClick)
 			ShipInMovement.transform.position = 
 				new Vector3 (ShipInMovement.transform.position.x, 
-					Mathf.Cos (origin.y * Time.time) * 0.2f, ShipInMovement.transform.position.z);
+				origin.y + Mathf.Cos(Time.time) * 0.5f, ShipInMovement.transform.position.z);
 	}
 }
