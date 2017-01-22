@@ -5,17 +5,27 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class PlayGame : MonoBehaviour {
-
+	public  GameObject ShipInMovement;
 	void Start () {
-		
+		ShipInMovement = GetComponentInParent<ShipManager>().ShipInMovement;
 	}
 	
 	void Update () {
-		
+		if(ShipManager.IsClick)
+			ShipInMovement.transform.position = 
+				new Vector3 (ShipInMovement.transform.position.x, 
+					ShipInMovement.transform.position.y, 
+						ShipInMovement.transform.position.z  - 10f * Time.deltaTime);
 	}
 
     public void RunGame()
     {
-        SceneManager.LoadScene(1); //remplacer 0 par l'index de la scène de jeu (Qui peut être modifiée dans le Build Settings)
+		ShipManager.IsClick = true;
+		Invoke ("Toward", 3);
     }
+
+	public void Toward(){
+		SceneManager.LoadScene(1);
+	}
+		
 }
