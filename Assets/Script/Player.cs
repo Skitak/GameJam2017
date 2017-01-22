@@ -1,13 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour {
 
     public GameObject prefab_exp;
 
+	public int nbPtsSec;
+	public Slider slider;
+
     private PlayerHead pH;
     private ParticleSystem explosion;
+
+	private float nbScore;
 
     void Start(){
 		pH = GetComponentInChildren<PlayerHead> ();
@@ -16,7 +22,13 @@ public class Player : MonoBehaviour {
     }
 
 
+	void Update(){
+		if (pH.getFlagged () == true) {
+			nbScore += (float) nbPtsSec * Time.deltaTime;
+			slider.value = nbScore;
+		}
 
+	}
 
     public void die()
 	{
@@ -25,10 +37,18 @@ public class Player : MonoBehaviour {
             explosion.transform.position = transform.position;
             explosion.gameObject.SetActive(true);
             explosion.Play();
+			if (pH.getFlagged () == true) {
+				pH.getFils().transform.DetachChildren();
+				pH.setFlagged (false);
+			}
 
             //Destroy(this.gameObject);
             gameObject.SetActive (false);
-			Invoke ("Respawn", GameObject.Find ("GameManager").GetComponent<GameManager> ().respawnTime);
+			//if(GameObject.Find("GameManager").GetComponents<GameManager>() == null)
+			Invoke ("Respawn", GameObject.Find ("GameManager").GetComponent<GameManage2> ().respawnTime);
+			//else
+				//Invoke ("Respawn", GameObject.Find ("GameManager").GetComponent<GameManager> ().respawnTime);
+			
 		}
 	}
 
@@ -49,10 +69,14 @@ public class Player : MonoBehaviour {
 
     public void Respawn()
     {
-        GameObject spawnPoint = GameManager.getBestSpawnPoint(this.gameObject);
+        GameObject spawnPoint = GameManage2.getBestSpawnPoint(this.gameObject);
         transform.position = spawnPoint.transform.position;
         transform.rotation = spawnPoint.transform.rotation;
         gameObject.SetActive(true);
     }
+
+	public float getScore(){
+		return nbScore;
+	}
 
 }

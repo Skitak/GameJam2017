@@ -12,8 +12,11 @@ public class PlayerHead : MonoBehaviour {
 	public float timerImmunity;
 	public shieldAnim shield;
     public Text m_text;
+
 	private float startTime = 0.0f;
 	private bool isInvincible;
+	private bool isFlagged;
+	private GameObject fils;
 
 	private float baseSpeed;
 	private float baseRotation;
@@ -45,10 +48,10 @@ public class PlayerHead : MonoBehaviour {
         if (other.gameObject.CompareTag("Player"))
         {
             other.gameObject.GetComponentInParent<Player>().die();
-            ++nbKill;
+            /*++nbKill;
             m_text.text = nbKill.ToString();
             if (nbKill > GameManager.getNbKillRequired())
-                GameManager.won(GetComponentInParent<Player>());
+                GameManager.won(GetComponentInParent<Player>());*/
         }
         else if (other.gameObject.CompareTag("Front"))
         {
@@ -62,19 +65,22 @@ public class PlayerHead : MonoBehaviour {
         }
         else if (other.gameObject.CompareTag("Collectible"))
         {
-            if (other.name == "collectibleVitesse")
-            {
-                Destroy(other.gameObject);
-                dep.vMax = dep.vMax * coefBoostSpeed;
-                dep.vRotate = dep.vRotate * coefBoostSpeed;
-                Invoke("SpeedTimer", timerBoostSpeed);
-            }
-            else if (other.name == "collectibleInvincible")
-            {
-                Destroy(other.gameObject);
-                isInvincible = true;
-                Invoke("ImmunityTimer", timerImmunity);
-            }
+			if (other.name == "collectibleVitesse") {
+				Destroy (other.gameObject);
+				dep.vMax = dep.vMax * coefBoostSpeed;
+				dep.vRotate = dep.vRotate * coefBoostSpeed;
+				Invoke ("SpeedTimer", timerBoostSpeed);
+			} else if (other.name == "collectibleInvincible") {
+				Destroy (other.gameObject);
+				isInvincible = true;
+				Invoke ("ImmunityTimer", timerImmunity);
+			} else if (other.name == "flag") {
+				other.transform.SetParent (this.transform);
+				other.transform.position = Vector3.zero;
+				fils = other.gameObject;
+				isFlagged = true;
+			}
+				
         }
         else
             GetComponentInParent<Player>().die();
@@ -87,6 +93,18 @@ public class PlayerHead : MonoBehaviour {
 
     public bool getInvincible(){
 		return isInvincible;
+	}
+
+	public bool getFlagged(){
+		return (isFlagged);
+	}
+
+	public void setFlagged(bool b){
+		isFlagged = b;
+	}
+
+	public GameObject getFils(){
+		return(fils);
 	}
 
 	void SpeedTimer()
