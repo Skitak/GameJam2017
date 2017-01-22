@@ -201,15 +201,17 @@ MonoBehaviour:
   changeSpeed: 1
   winds:
   - {fileID: 1508505249449784}
-  - {fileID: 1508505249449784}
+  - {fileID: 1179188489811990}
   - {fileID: 1438842766568978}
   - {fileID: 1249975202149012}
-  - {fileID: 1179188489811990}
   timer_from: 20
   timer_to: 25
   transition_time: 5
   particles: {fileID: 0}
-  paused: 1
+  paused: 0
+  feedbackTimebBeforeWindChange: 2
+  feedbackDuration: 3
+  windFeedbackGo: {fileID: 0}
 --- !u!198 &198257236020409092
 ParticleSystem:
   m_ObjectHideFlags: 1
