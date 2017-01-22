@@ -6,11 +6,17 @@ public class ShipManager : MonoBehaviour {
 
 	public GameObject ShipInMovement;
 	public static bool IsClick = false;
+	public GameObject ButtonsMenu;
+	public GameObject EscapeObj;
+	public GameObject ButtonsSelection;
 
 	private Vector3 origin;
 
 	void Start () {
 		origin = ShipInMovement.transform.position;
+		ButtonsMenu.SetActive (true);
+		EscapeObj.SetActive(false);
+		ButtonsSelection.SetActive (false);
 	}
 
 

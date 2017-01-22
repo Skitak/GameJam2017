@@ -3,18 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class escape : MonoBehaviour {
-    public GameObject Buttons;
+    public GameObject ButtonsMenu;
 	public GameObject ourButtons;
-    // Use this for initialization
+	public GameObject ButtonsSelection;
+
     void Start () {}
 	
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetButton("Cancel"))
         {
-			Buttons.SetActive (true);
+			ButtonsMenu.SetActive (true);
 			ourButtons.SetActive (false);
-
+			ButtonsSelection.SetActive (false);
         }
 	}
 }

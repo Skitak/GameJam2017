@@ -4,25 +4,24 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Generique : MonoBehaviour {
-    public GameObject Buttons;
-    public GameObject EscapeObj;
+	public GameObject ButtonsMenu;
+	public GameObject EscapeObj;
+	public GameObject ButtonsSelection;
 
-    // Use tis for initialization
-    void Start()
-    {
-        Buttons = GameObject.FindWithTag("Buttons");
-        EscapeObj = GameObject.FindWithTag("EscapeTag");
-        EscapeObj.SetActive(false);
-    }
-	
-	// Update is called once per frame
-	void Update () {
-		
+	void Start () {
+		ButtonsMenu = GetComponentInParent<ShipManager> ().ButtonsMenu;
+		ButtonsSelection = GetComponentInParent<ShipManager> ().ButtonsSelection;
+		EscapeObj = GetComponentInParent<ShipManager> ().EscapeObj;
 	}
 
-    public void RunGeneric()
-    {
-        Buttons.SetActive(false);
-        EscapeObj.SetActive(true);
-    }
+	void Update () {
+
+	}
+
+	public void RunGeneric()
+	{
+		ButtonsMenu.SetActive (false);
+		EscapeObj.SetActive(true);
+		ButtonsSelection.SetActive (false);
+	}
 }

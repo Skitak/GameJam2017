@@ -5,27 +5,30 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class PlayGame : MonoBehaviour {
-	public  GameObject ShipInMovement;
+	public GameObject ButtonsMenu;
+	public GameObject EscapeObj;
+	public GameObject ButtonsSelection;
+
 	void Start () {
-		ShipInMovement = GetComponentInParent<ShipManager>().ShipInMovement;
+		ButtonsMenu = GetComponentInParent<ShipManager> ().ButtonsMenu;
+		ButtonsSelection = GetComponentInParent<ShipManager> ().ButtonsSelection;
+		EscapeObj = GetComponentInParent<ShipManager> ().EscapeObj;
 	}
 	
 	void Update () {
-		if(ShipManager.IsClick)
-			ShipInMovement.transform.position = 
-				new Vector3 (ShipInMovement.transform.position.x, 
-					ShipInMovement.transform.position.y, 
-						ShipInMovement.transform.position.z  - 10f * Time.deltaTime);
+		if (Input.GetButton("Cancel"))
+		{
+			ButtonsMenu.SetActive (true);
+			EscapeObj.SetActive (false);
+			ButtonsSelection.SetActive (false);
+		}
 	}
 
     public void RunGame()
     {
-		ShipManager.IsClick = true;
-		Invoke ("Toward", 3);
+		ButtonsMenu.SetActive (false);
+		EscapeObj.SetActive(true);
+		ButtonsSelection.SetActive (true);
     }
-
-	public void Toward(){
-		SceneManager.LoadScene(1);
-	}
 		
 }
