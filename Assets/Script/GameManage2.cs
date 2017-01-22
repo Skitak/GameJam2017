@@ -11,8 +11,8 @@ public class GameManage2 : Manager {
 	private float timer;
 
 	void Awake(){
-		if (manager == null)
-			manager = this;
+		if (Manager.manager == null)
+			Manager.manager = this;
 		else
 			Debug.Log ("HAHAHHAHAHA");
 		
