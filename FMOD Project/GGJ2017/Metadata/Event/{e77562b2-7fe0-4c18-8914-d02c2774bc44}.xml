@@ -5,7 +5,7 @@
             <value>ship_contact</value>
         </property>
         <property name="outputFormat">
-            <value>2</value>
+            <value>1</value>
         </property>
         <relationship name="mixer">
             <destination>{0a4a7ff2-2660-47c4-bf13-38449d9e509a}</destination>
@@ -121,7 +121,6 @@
     <object class="MixerBusEffectChain" id="{ee73819e-f153-46f0-b93e-a2bb50acf9a6}">
         <relationship name="effects">
             <destination>{0acbcbb3-795c-4a2d-8db9-52f4ddd7bc36}</destination>
-            <destination>{3afa24e3-68df-48b8-86ab-1d74c08193d6}</destination>
         </relationship>
     </object>
     <object class="MixerBusPanner" id="{f231e793-bcd9-493b-90c1-7487117b6e11}"/>
@@ -156,7 +155,6 @@
     </object>
     <object class="MixerBusPanner" id="{57060a01-3a1d-4097-a807-c204e3a30655}"/>
     <object class="MixerBusFader" id="{0acbcbb3-795c-4a2d-8db9-52f4ddd7bc36}"/>
-    <object class="SpatialiserEffect" id="{3afa24e3-68df-48b8-86ab-1d74c08193d6}"/>
     <object class="AutomationPoint" id="{6b346348-cebd-4123-b300-8b827354fdfa}">
         <property name="position">
             <value>1.4339622641509433</value>
