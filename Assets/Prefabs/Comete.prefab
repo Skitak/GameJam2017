@@ -59,7 +59,7 @@ GameObject:
   - component: {fileID: 114770518726918152}
   m_Layer: 9
   m_Name: Comete
-  m_TagString: Front
+  m_TagString: Comete
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -194,7 +194,7 @@ SphereCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1700140272735962}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5

@@ -28,7 +28,7 @@ public class GameManager : Manager {
         timer -= Time.deltaTime;
         if (timer <= 0)
             end();
-        //m_text.text = String.Format("{0:0}:{1:00}", Mathf.Floor(timer / 60), timer % 60); 
+        m_text.text = String.Format("{0:0}:{1:00}", Mathf.Floor(timer / 60), timer % 60); 
 	}
 
     void end()

@@ -209,7 +209,7 @@ MonoBehaviour:
   transition_time: 5
   particles: {fileID: 0}
   paused: 0
-  feedbackTimebBeforeWindChange: 2
+  feedbackTimeBeforeWindChange: 2
   feedbackDuration: 3
   windFeedbackGo: {fileID: 0}
 --- !u!198 &198257236020409092

@@ -25,7 +25,8 @@ public class Player : MonoBehaviour {
 	void Update(){
 		if (pH.getFlagged () == true) {
 			nbScore += (float) nbPtsSec * Time.deltaTime;
-			slider.value = nbScore;
+			if (slider != null)
+                slider.value = nbScore;
 		}
 
 	}
@@ -46,7 +47,7 @@ public class Player : MonoBehaviour {
             //Destroy(this.gameObject);
             gameObject.SetActive (false);
 			//if(GameObject.Find("GameManager").GetComponents<GameManager>() == null)
-			Invoke ("Respawn", GameObject.Find ("GameManager").GetComponent<GameManage2> ().respawnTime);
+			Invoke ("Respawn", Manager.respawnTimer());
 			//else
 				//Invoke ("Respawn", GameObject.Find ("GameManager").GetComponent<GameManager> ().respawnTime);
 			
@@ -88,13 +89,13 @@ public class Player : MonoBehaviour {
 		float actualAngle = angleDesired * multiplier * direction + otherAngle;
 		Vector3 angle = new Vector3 (0, actualAngle, 0);
 		transform.eulerAngles = angle;
-
+        GetComponent<PlayerSound>().OnDie();
 
     }
 
     public void Respawn()
     {
-        GameObject spawnPoint = GameManage2.getBestSpawnPoint(this.gameObject);
+        GameObject spawnPoint = Manager.getBestSpawnPoint(this.gameObject);
         transform.position = spawnPoint.transform.position;
         transform.rotation = spawnPoint.transform.rotation;
         gameObject.SetActive(true);

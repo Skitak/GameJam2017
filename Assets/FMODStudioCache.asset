@@ -13,13 +13,53 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114785961076090934}
-  - {fileID: 114520432432154394}
+  - {fileID: 114061823873372530}
   EditorEvents:
-  - {fileID: 114618745373122872}
-  MasterBankRef: {fileID: 114520432432154394}
+  - {fileID: 114227660937867692}
+  - {fileID: 114405336574298014}
+  - {fileID: 114819303870971752}
+  - {fileID: 114886642288957362}
+  - {fileID: 114634343905790644}
+  - {fileID: 114666828349353614}
+  - {fileID: 114336451652295866}
+  MasterBankRef: {fileID: 114061823873372530}
   StringsBankRef: {fileID: 114785961076090934}
-  stringsBankWriteTime: 636205880803035461
+  stringsBankWriteTime: 636206817419119310
   cacheVersion: 2
+--- !u!114 &114019575507390286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: speed
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114061823873372530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Unity projects\GlobalGameJam2017\FMOD Project\GGJ2017\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636206817419104376
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 2361600
+  Exists: 1
 --- !u!114 &114197911372836874
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35,6 +75,69 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114227660937867692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Ships/ship_destruction
+  guid: 007f674afd667d4aaf2116e919be7b19
+  Banks:
+  - {fileID: 114061823873372530}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+--- !u!114 &114336451652295866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/windofchange
+  guid: d13ddf3085b3cc419b9662a60b37393f
+  Banks:
+  - {fileID: 114061823873372530}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+--- !u!114 &114405336574298014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Music/MainMenuTheme
+  guid: 4a5808188bacc34082afa2a5b1c80a8f
+  Banks:
+  - {fileID: 114061823873372530}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
 --- !u!114 &114463935232835694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,12 +239,33 @@ MonoBehaviour:
   Path: event:/ship sound
   guid: 76f87c712abd67459553c37a49ea4eab
   Banks:
-  - {fileID: 114520432432154394}
+  - {fileID: 114061823873372530}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114197911372836874}
+  - {fileID: 114019575507390286}
+  MinDistance: 0
+  MaxDistance: 0
+--- !u!114 &114634343905790644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Ships/ship_contact
+  guid: b26275e7e07f184c8914d02c2774bc44
+  Banks:
+  - {fileID: 114061823873372530}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
   MinDistance: 0
   MaxDistance: 0
 --- !u!114 &114663000938597816
@@ -159,6 +283,27 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114666828349353614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Ships/ship_hit
+  guid: e03c061f81040549a4c854cccac73588
+  Banks:
+  - {fileID: 114061823873372530}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
 --- !u!114 &114785961076090934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -171,11 +316,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: FMOD Project\GGJ2017\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636205880803035461
+  lastModified: 636206817419119310
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 674
+    Value: 976
   Exists: 1
 --- !u!114 &114813863531140466
 MonoBehaviour:
@@ -196,6 +341,48 @@ MonoBehaviour:
   - Name: Desktop
     Value: 34528
   Exists: 1
+--- !u!114 &114819303870971752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Interface/menu_button_off
+  guid: 6386683182c3ed4c9bcfe627008d09c5
+  Banks:
+  - {fileID: 114061823873372530}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+--- !u!114 &114886642288957362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Interface/menu_button_on
+  guid: 753cd91aa081144ebee2657efb43ba62
+  Banks:
+  - {fileID: 114061823873372530}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
 --- !u!114 &114911694269068592
 MonoBehaviour:
   m_ObjectHideFlags: 0

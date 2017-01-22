@@ -37,8 +37,22 @@ public abstract class Manager : MonoBehaviour {
 		return spawnPoint;
 	}
 
+    public static float respawnTimer()
+    {
+        return manager.respawnTime;
+    }
+
 	public static void win (Player p){
 		
 	}
 
+    public static bool deathMatch()
+    {
+        return manager is GameManager;
+    }
+
+    public static bool captureFlag()
+    {
+        return !deathMatch();
+    }
 }

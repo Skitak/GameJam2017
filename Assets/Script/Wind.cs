@@ -29,7 +29,7 @@ public class Wind : MonoBehaviour {
     void Start()
     {
 
-        windFeedbackGo.GetComponent<MeshRenderer>().enabled = false;
+        windFeedbackGo.GetComponentInChildren<MeshRenderer>().enabled = false;
 
         activeWind = Random.Range(0, winds.Length);
         timer = Random.Range(timer_from, timer_to);
@@ -66,10 +66,10 @@ public class Wind : MonoBehaviour {
 
         int nextActiveWind = Random.Range(0, winds.Length);
 
-        windFeedbackGo.transform.position = new Vector3(-Mathf.Sin(winds[nextActiveWind].transform.localEulerAngles.y * Mathf.Deg2Rad), 0, -Mathf.Cos(winds[nextActiveWind].transform.localEulerAngles.y * Mathf.Deg2Rad)) * 120;
-
+        windFeedbackGo.transform.position = new Vector3(Mathf.Sin(winds[nextActiveWind].transform.localEulerAngles.y * Mathf.Deg2Rad), 0, Mathf.Cos(winds[nextActiveWind].transform.localEulerAngles.y * Mathf.Deg2Rad)) * 100;
+        windFeedbackGo.transform.forward = windFeedbackGo.transform.position;
         if (nextActiveWind != activeWind)
-            windFeedbackGo.GetComponent<MeshRenderer>().enabled = true;
+            windFeedbackGo.GetComponentInChildren<MeshRenderer>().enabled = true;
 
 
         yield return new WaitForSeconds(feedbackTimeBeforeWindChange);
@@ -86,7 +86,7 @@ public class Wind : MonoBehaviour {
         yield return new WaitForSeconds(feedbackDuration - feedbackTimeBeforeWindChange);
 
         
-        windFeedbackGo.GetComponent<MeshRenderer>().enabled = false;
+        windFeedbackGo.GetComponentInChildren<MeshRenderer>().enabled = false;
 
         windChangeRoutine = null;
 
