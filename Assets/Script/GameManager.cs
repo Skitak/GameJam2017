@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour {
         timer -= Time.deltaTime;
         if (timer <= 0)
             end();
-        m_text.text = String.Format("{0:0}:{1:00}", Mathf.Floor(timer / 60), timer % 60); 
+        //m_text.text = String.Format("{0:0}:{1:00}", Mathf.Floor(timer / 60), timer % 60); 
 	}
 
     void end()
@@ -48,7 +48,7 @@ public class GameManager : MonoBehaviour {
             }
         }
 
-        won(winner.GetComponent<Player>());
+       // won(winner.GetComponent<Player>());
     }
 
     public static GameObject getBestSpawnPoint(GameObject playerOut)
