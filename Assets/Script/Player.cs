@@ -4,20 +4,30 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
 
-	private PlayerHead pH;
+    public GameObject prefab_exp;
 
-	void Start(){
+    private PlayerHead pH;
+    private ParticleSystem explosion;
+
+    void Start(){
 		pH = GetComponentInChildren<PlayerHead> ();
-	}
+        explosion = Instantiate(prefab_exp).GetComponent<ParticleSystem>();
+        explosion.gameObject.SetActive(false);
+    }
 
 
 
 
     public void die()
 	{
-		if (!pH.getInvincible ()) {
-			//Destroy(this.gameObject);
-			gameObject.SetActive (false);
+		if (!pH.getInvincible ())
+        {
+            explosion.transform.position = transform.position;
+            explosion.gameObject.SetActive(true);
+            explosion.Play();
+
+            //Destroy(this.gameObject);
+            gameObject.SetActive (false);
 			Invoke ("Respawn", GameObject.Find ("GameManager").GetComponent<GameManager> ().respawnTime);
 		}
 	}

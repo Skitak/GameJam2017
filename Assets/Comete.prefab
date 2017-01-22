@@ -170,7 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdbb2e30e4cc7ac48ac568fa0872dd2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parent: {fileID: 1596345906338260}
+  m_speed: 10
 --- !u!135 &135234611479607476
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -410,8 +410,8 @@ ParticleSystem:
         m_Mode: 0
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
-      minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.5294118, g: 0.6313726, b: 0.7647059, a: 1}
+      minColor: {r: 1, g: 0.41960785, b: 0.41960785, a: 1}
+      maxColor: {r: 1, g: 0, b: 0, a: 1}
       minMaxState: 2
     startSize:
       scalar: 1
