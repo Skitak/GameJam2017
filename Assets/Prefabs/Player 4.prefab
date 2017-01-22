@@ -2207,7 +2207,7 @@ Transform:
   m_GameObject: {fileID: 1383519797938636}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children: []
   m_Father: {fileID: 4778593773933142}
   m_RootOrder: 0
@@ -5468,7 +5468,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 88
+  m_Constraints: 84
   m_CollisionDetection: 2
 --- !u!65 &65496971389928282
 BoxCollider:
@@ -8217,7 +8217,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1431474832
+  randomSeed: 1294393562
   InitialModule:
     serializedVersion: 3
     enabled: 1
