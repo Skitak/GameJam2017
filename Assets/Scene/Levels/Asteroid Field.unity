@@ -586,6 +586,11 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -118.72201
       objectReference: {fileID: 0}
+    - target: {fileID: 54688751917180004, guid: 18cf046e3f62d464e9b82d2f28c67e0b,
+        type: 2}
+      propertyPath: m_CollisionDetection
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 18cf046e3f62d464e9b82d2f28c67e0b, type: 2}
   m_IsPrefabParent: 0
@@ -836,6 +841,11 @@ Prefab:
     - target: {fileID: 4778593773933142, guid: fd8f65d95f85e7a4d8058d0c2760a1be, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 56.577003
+      objectReference: {fileID: 0}
+    - target: {fileID: 54230708000053982, guid: fd8f65d95f85e7a4d8058d0c2760a1be,
+        type: 2}
+      propertyPath: m_CollisionDetection
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fd8f65d95f85e7a4d8058d0c2760a1be, type: 2}
@@ -1884,6 +1894,11 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -58.893
       objectReference: {fileID: 0}
+    - target: {fileID: 54354368108723498, guid: b733c9aab3bcd6e4393af6fe92949e34,
+        type: 2}
+      propertyPath: m_CollisionDetection
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b733c9aab3bcd6e4393af6fe92949e34, type: 2}
   m_IsPrefabParent: 0
@@ -2140,6 +2155,9 @@ MonoBehaviour:
   - {fileID: 80277573}
   - {fileID: 727845979}
   respawnTime: 2
+  nbKillRequired: 0
+  m_time_end: 0
+  m_text: {fileID: 0}
 --- !u!4 &1127834570
 Transform:
   m_ObjectHideFlags: 0
@@ -2461,6 +2479,11 @@ Prefab:
     - target: {fileID: 4123180360672650, guid: c38ea0f25a72f1446b9068afb9385c71, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 139.571
+      objectReference: {fileID: 0}
+    - target: {fileID: 54247188934496140, guid: c38ea0f25a72f1446b9068afb9385c71,
+        type: 2}
+      propertyPath: m_CollisionDetection
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c38ea0f25a72f1446b9068afb9385c71, type: 2}
